@@ -14,11 +14,11 @@ const App = () => {
       <Header />
       <Routes>
   <Route path="/" element={<Home />} />
-  <Route path="/Historia" element={<Historia />} />
-  <Route path="/EventosOficinas" element={<EventosOficinas />} />
-  <Route path="/ComoSeVoluntariar" element={<ComoSeVoluntariar />} />
-  <Route path="/Parceiros" element={<Parceiros />} />
-  <Route path="/Contatos" element={<Contatos />} />
+  <Route path="/historia" element={<Historia />} />
+  <Route path="/eventos-oficinas" element={<EventosOficinas />} />
+  <Route path="/como-se-voluntariar" element={<ComoSeVoluntariar />} />
+  <Route path="/parceiros" element={<Parceiros />} />
+  <Route path="/contatos" element={<Contatos />} />
 </Routes>
 
     </Router>

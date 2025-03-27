@@ -89,8 +89,8 @@ section p {
 /* Box de Evento */
 .eventos-oficinas {
   padding: 30px;
-  background-color: lightblue; /* Isso ajuda a testar se o conteúdo aparece */
   min-height: 100vh;
+  background-color: #f8f8f8;
 }
 .evento-box,
 .parceiro {
