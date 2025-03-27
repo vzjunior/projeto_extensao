@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 
 const EventosOficinas = () => {
-  useEffect(() => {
-    console.log("Página de Eventos e Oficinas carregada!");
-  }, []);
-
   return (
     <section id="eventos-oficinas">
       <h1>Eventos e Oficinas</h1>
