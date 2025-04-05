@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
+import styles from'../Section.module.css';
 const EventosOficinas = () => {
   return (
-    <section id="eventos-oficinas">
+    <section className={styles.section} id="eventos-oficinas">
       <h1>Eventos e Oficinas</h1>
       <div className="evento-box">Evento 1</div>
       <div className="evento-box">Evento 2</div>

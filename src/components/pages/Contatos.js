@@ -1,8 +1,8 @@
 import React from 'react';
-
+import styles from '../Section.module.css'
 const Contatos = () => {
   return (
-    <section id="contato">
+    <section className={styles.section} id="contato">
       <h2>Contato</h2>
       <form>
         <input type="text" placeholder="Nome" required />

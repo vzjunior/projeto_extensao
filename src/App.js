@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './components/Home';
-import Historia from './components/Historia';
-import EventosOficinas from './components/EventosOficinas';
-import ComoSeVoluntariar from './components/ComoSeVoluntariar';
-import Parceiros from './components/Parceiros';
-import Contatos from './components/Contatos';
+import Home from './components/pages/Home';
+import Historia from './components/pages/Historia';
+import EventosOficinas from './components/pages/EventosOficinas';
+import ComoSeVoluntariar from './components/pages/ComoSeVoluntariar';
+import Parceiros from './components/pages/Parceiros';
+import Contatos from './components/pages/Contatos';
 import'./styles.css';
+import Footer from './components/Footer';
 const App = () => {
   return (
     <Router>
@@ -20,6 +21,7 @@ const App = () => {
   <Route path="/parceiros" element={<Parceiros />} />
   <Route path="/contatos" element={<Contatos />} />
 </Routes>
+<Footer/>
 
     </Router>
   );
