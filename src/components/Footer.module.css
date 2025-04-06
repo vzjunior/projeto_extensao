@@ -6,7 +6,38 @@
    
   }
   
-  .footer p {
-    font-size: 0.9em;
+  .social_list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
   }
-  
+  .social_list li  {
+    margin: 0 1em;
+
+  }
+
+.facebook {
+  color: #3b5998; 
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.instagram {
+  color: #e1306c; 
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.youtube {
+  color: #ff0000; 
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.facebook:hover,
+.instagram:hover,
+.youtube:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
