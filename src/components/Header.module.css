@@ -1,37 +1,112 @@
 /* Cabeçalho (Header) */
 .header {
-  background-image: url('../assets/images/fotoCabeçalho.jpeg'); 
+  background-color: #40609B;
   background-size: cover;
   background-position: center;
   color: white;
   padding: 10px 20px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: 100px; /* altura suficiente para centralizar verticalmente */
 }
 
-
+/* Container da navegação */
 .navContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
+/* Seção esquerda: logo */
 .leftSection {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  height: 60px;
-  margin-right: 15px;
+  height: 70px;
+  margin-right: 10px;
 }
 
-.centerSection {
+/* Centraliza a UL no meio do header */
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  list-style: none;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
+.menu li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+/* Efeito de linha branca no hover */
+.menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* Botões no lado direito */
+.rightSection {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.actionBtn {
+  background-color: transparent;
+  color: white;
+  padding: 6px 0;
+  width: 100px;              /* largura fixa igual para todos os botões */
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+/* Linha branca animada no hover */
+.actionBtn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.actionBtn:hover::after {
+  width: 100%;
+}
+
+
+
+/* Campo de busca (se ainda for usado) */
 .centerSection input[type="text"] {
   padding: 6px;
   border-radius: 4px;
@@ -47,43 +122,6 @@
   cursor: pointer;
 }
 
-.rightSection {
-  display: flex;
-  gap: 10px;
-}
-
-.actionBtn {
-  background-color: #555;
-  color: white;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  padding: 0;
-}
-
-.menu li {
-  margin: 0 15px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-}
-
-.menu li a:hover {
-  color: #ff9800;
-}
-
-input{
+input {
   width: 500px;
 }

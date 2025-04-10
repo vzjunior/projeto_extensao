@@ -1,7 +1,7 @@
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #40609B;
     color: white;
    
   }
@@ -17,7 +17,7 @@
   }
 
 .facebook {
-  color: #3b5998; 
+  color: #000; 
   font-size: 32px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
