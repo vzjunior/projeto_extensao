@@ -83,3 +83,7 @@
 .menu li a:hover {
   color: #ff9800;
 }
+
+input{
+  width: 500px;
+}
