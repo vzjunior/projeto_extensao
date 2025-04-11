@@ -1,26 +1,25 @@
 .section {
-  
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 1100px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .section h1,
-  section h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-  }
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1100px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h1,
+.section h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
 
   .eventoContainer {
     display: flex;
@@ -43,77 +42,22 @@
     transform: translateY(-5px);
   }
   
-
-  .parceirosContainer {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
+  .historiaContainer {
+    display: block; 
   }
   
-  .parceiro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+  .historiaContainer img {
+    float: left;
+    width: 500px; 
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+    
   }
   
-  .circle {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db; /* cor do botão */
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    transition: transform 0.2s ease;
+  .historiaTexto {
+    overflow: hidden; 
   }
-  
-  .circle:hover {
-    transform: scale(1.1);
-  }
-  
-  .parceiro span {
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .parceirosContainer {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-  }
-  
-  .parceiro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .circle {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db; /* cor do botão */
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .circle:hover {
-    transform: scale(1.1);
-  }
-  
-  .parceiro span {
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  
-  
   
