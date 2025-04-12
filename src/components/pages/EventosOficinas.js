@@ -7,18 +7,18 @@ const EventosOficinas = () => {
       <h1>Eventos e Oficinas</h1>
       <div className={styles.eventoContainer}>
         <div className={styles.eventoBox}>
-          <h2>Workshop de Programação</h2>
-          <p>Aprenda lógica de programação com especialistas da área. Dia 15 de abril.</p>
+          <h2>Pedágio voluntário</h2>
+          <p>Dia 15/04 acontecerá o pedágio voluntário em frente ao Shopping Della</p>
         </div>
 
         <div className={styles.eventoBox}>
-          <h2>Oficina de Robótica</h2>
-          <p>Monte seu próprio robô com kits de Arduino. Dia 18 de abril.</p>
+          <h2>Páscoa Instituto</h2>
+          <p>Dia 18/04 acontecerá a Páscoa solidária no Instituto</p>
         </div>
 
         <div className={styles.eventoBox}>
-          <h2>Palestra: Carreiras em TI</h2>
-          <p>Profissionais do mercado compartilham suas experiências. Dia 20 de abril.</p>
+          <h2>Reciclagem Diomicio</h2>
+          <p>Coleta de tampas e lacres em frente ao Instituto</p>
         </div>
       </div>
     </section>
