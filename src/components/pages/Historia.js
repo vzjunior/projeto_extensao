@@ -8,7 +8,7 @@ const Historia = () => {
     <section className={styles.section} id="historia">
       <div className={styles.historiaContainer}>
       <h1>História</h1>
-        <img src={historia} alt="história" className={styles.historiaContainer} />
+        <img src={historia} alt="história"  />
         
           
           <p>

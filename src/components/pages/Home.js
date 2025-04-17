@@ -3,8 +3,8 @@ import styles from '../Section.module.css';
 const Home = () => {
   return (
     <section className={styles.section} id="home">
-      <h1>Bem-vindo à nossa instituição</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <h1>Bem-vindo ao Instituto Diomício Freitas</h1>
+      <p>Transformando vidas através da inclusão e da educação especial.
         
       </p>
     </section>
