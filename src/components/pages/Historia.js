@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../Section.module.css';
+import stylesHistoria from './Historia.module.css';
 import historia from '../../assets/images/imgHistoria.jpeg';
 
 
 const Historia = () => {
   return (
     <section className={styles.section} id="historia">
-      <div className={styles.historiaContainer}>
+      <div className={stylesHistoria.historiaContainer}>
       <h1>História</h1>
         <img src={historia} alt="história"  />
         

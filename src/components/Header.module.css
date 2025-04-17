@@ -1,12 +1,17 @@
 /* Cabeçalho (Header) */
 .header {
+    /* fixa o elemento na tela */
+  top: 0;             /* alinha ao topo */
+  left: 0;            /* alinha à esquerda */
+  width: 100%;        /* ocupa toda a largura */
+  z-index: 1000;      /* fica acima dos outros elementos */
   background-color: black;
   background-size: cover;
   background-position: center;
   color: white;
   padding: 10px 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  position: relative;
+  position: fixed;
   height: 100px; /* altura suficiente para centralizar verticalmente */
 }
 

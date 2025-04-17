@@ -1,0 +1,20 @@
+.eventoContainer {
+    display: flex;
+    gap: 1rem; /* espaçamento entre os boxes */
+    flex-wrap: wrap; /* quebra de linha em telas menores */
+    justify-content: center; /* centraliza os boxes */
+    margin-top: 1rem;
+  }
+  
+  .eventoBox {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px; /* largura do box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .eventoBox:hover {
+    transform: translateY(-5px);
+  }
