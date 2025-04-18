@@ -1,0 +1,36 @@
+.passosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: center;
+  }
+
+
+  .listaPassos {
+    list-style-position: inside; /* se quiser os números/alíneas por dentro */
+    padding-left: 0; /* remove o espaçamento lateral padrão */
+    margin-bottom: 30px;
+    text-align: left; /* ou center, depende do efeito desejado */
+  }
+  
+  
+  .listaPassos li  {
+    
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .botao {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .botao:hover {
+    background-color: #333;
+  }

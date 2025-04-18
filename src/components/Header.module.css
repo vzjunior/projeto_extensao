@@ -5,7 +5,7 @@
   left: 0;            /* alinha à esquerda */
   width: 100%;        /* ocupa toda a largura */
   z-index: 1000;      /* fica acima dos outros elementos */
-  background-color: black;
+  background-color:  #1A237E;
   background-size: cover;
   background-position: center;
   color: white;

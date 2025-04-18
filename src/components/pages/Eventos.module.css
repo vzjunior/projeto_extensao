@@ -1,6 +1,6 @@
 .eventoContainer {
     display: flex;
-    gap: 1rem; /* espaçamento entre os boxes */
+    gap: 2rem; /* espaçamento entre os boxes */
     flex-wrap: wrap; /* quebra de linha em telas menores */
     justify-content: center; /* centraliza os boxes */
     margin-top: 1rem;
@@ -16,5 +16,5 @@
   }
   
   .eventoBox:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
   }
