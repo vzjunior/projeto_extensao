@@ -1,16 +1,19 @@
 .historiaContainer {
-    display: block; 
-  }
-  
-  .historiaContainer img {
-    float: left;
-    width: 500px; 
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-  }
-  
+  display: block;
+  height: 100%;
+}
+
+.historiaContainer img {
+  float: left;
+  width: 500px;
+  height: 100%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historiaContainer p {
+  text-align: justify;
+}
