@@ -74,6 +74,17 @@ const Home = () => {
           </Link>
           <span className={stylesHome.date}>13 June 2023</span>
         </div>
+
+        <div className={stylesHome.eventCard}>
+          <img src={imgEvent2} alt="Evento 2" />
+          <span className={stylesHome.category}>EVENTS</span>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>TONY HUNGRY</p>
+          <Link to="/eventos/2" className={stylesHome.saibaMais}>
+            Saiba mais
+          </Link>
+          <span className={stylesHome.date}>13 June 2023</span>
+        </div>
       </div>
     </section>
   );

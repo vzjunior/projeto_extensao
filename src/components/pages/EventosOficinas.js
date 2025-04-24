@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Section.module.css';
 import stylesEventos from './Eventos.module.css';
-
+import imgEvent3 from "../../assets/images/fotoTesteHome.jpeg";
 
 const EventosOficinas = () => {
   return (
@@ -9,19 +9,30 @@ const EventosOficinas = () => {
       <h1>Eventos e Oficinas</h1>
       <div className={stylesEventos.eventoContainer}>
         <div className={stylesEventos.eventoBox}>
+        <img src={imgEvent3} alt="Evento 3" />
           <h2>Pedágio voluntário</h2>
           <p>Dia 15/04 acontecerá o pedágio voluntário em frente ao Shopping Della</p>
         </div>
 
         <div className={stylesEventos.eventoBox}>
+        <img src={imgEvent3} alt="Evento 3" />
           <h2>Páscoa Instituto</h2>
           <p>Dia 18/04 acontecerá a Páscoa solidária no Instituto</p>
         </div>
 
         <div className={stylesEventos.eventoBox}>
+        <img src={imgEvent3} alt="Evento 3" />
           <h2>Reciclagem Diomicio</h2>
           <p>Coleta de tampas e lacres em frente ao Instituto</p>
         </div>
+
+        <div className={stylesEventos.eventoBox}>
+        <img src={imgEvent3} alt="Evento 3" />
+          <h2>Clube de mães</h2>
+          <p>Grupo clube de mães Instituto</p>
+        </div>
+
+
       </div>
     </section>
   );

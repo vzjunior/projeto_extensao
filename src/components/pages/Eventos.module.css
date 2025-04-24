@@ -12,7 +12,19 @@
   padding: 12px; /* padding igual ao do eventCard */
   border-radius: 12px; /* border-radius igual ao do eventCard */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  
 }
+
+.eventoBox img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+
 
 .eventoBox:hover {
   transform: scale(1.05);
