@@ -9,9 +9,11 @@ import Parceiros from './components/pages/Parceiros';
 import Contatos from './components/pages/Contatos';
 import'./styles.css';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
   <Route path="/" element={<Home />} />
