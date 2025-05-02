@@ -1,14 +1,13 @@
 .historiaContainer {
   display: block;
-  height: 100%;
+  height: auto;
 }
 
 .historiaContainer img {
-  float: left;
-  width: 500px;
-  height: 100%;
-  margin-right: 20px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 450px;
+  max-width: 100%;
+  margin-bottom: 20px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -1,19 +1,28 @@
+.eventoContainer p {
+  text-align: justify;
+}
+
 .eventoContainer {
   display: flex;
-  gap: 2rem; /* espaçamento entre os boxes */
-  flex-wrap: wrap; /* quebra de linha em telas menores */
-  justify-content: center; /* centraliza os boxes */
-  margin-top: 1rem;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .eventoBox {
+  text-align: center;
   background-color: #f5f5f5;
-  width: 250px; /* largura ajustada para igual ao eventCard */
-  padding: 12px; /* padding igual ao do eventCard */
-  border-radius: 12px; /* border-radius igual ao do eventCard */
+  width: 250px;
+  padding: 12px;
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  
+.eventoBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .eventoBox img {
@@ -24,9 +33,15 @@
   margin-bottom: 8px;
 }
 
+.eventoBox h2 {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #222;
+}
 
-
-.eventoBox:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra no hover igual ao do eventCard */
+.eventoBox p {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  text-align: center;
 }

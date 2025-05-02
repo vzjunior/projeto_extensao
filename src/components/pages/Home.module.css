@@ -1,3 +1,15 @@
+p {
+  text-align: center;
+}
+
+.fundoHome {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 .newsSection {
   display: flex;
   flex-direction: column;
@@ -35,6 +47,10 @@
 .newsCard h3 {
   margin: 8px 0;
   color: #222;
+}
+
+.newsCard p {
+  text-align: justify;
 }
 
 .date {
@@ -106,4 +122,22 @@
 
 .saibaMais:hover {
   background-color: #002f60;
+}
+
+.acoesSection {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.acoesList {
+  list-style: disc;
+  padding-left: 20px;
+  color: #333;
+}
+
+.acoesList li {
+  margin-bottom: 12px;
+  line-height: 1.6;
 }

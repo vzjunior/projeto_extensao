@@ -6,6 +6,8 @@ import imgNews2 from "../../assets/images/fotoTesteHome.jpeg";
 import imgEvent1 from "../../assets/images/fotoTesteHome.jpeg";
 import imgEvent2 from "../../assets/images/fotoTesteHome.jpeg";
 import imgEvent3 from "../../assets/images/fotoTesteHome.jpeg";
+import imgEvent4 from "../../assets/images/fotoTesteHome.jpeg";
+import fundoHome from "../../assets/images/fundoHome.jpeg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,32 +15,125 @@ const Home = () => {
     <section className={styles.section} id="home">
       <h1>Instituto Diomício Freitas</h1>
       <p>Transformando vidas através da inclusão e da educação especial.</p>
+      <img
+        className={stylesHome.fundoHome}
+        src={fundoHome}
+        alt="Imagem de fundo"
+      />
+
+      <div className={stylesHome.acoesSection}>
+        <h2>Ações Realizadas</h2>
+        <ul className={stylesHome.acoesList}>
+          <li>
+            <strong>Projeto “Recicle Correto” – Reciclagem de Blisters:</strong>{" "}
+            Iniciativa inédita com farmácias locais, utilizando bombonas de 300L
+            para coleta de cartelas de comprimidos. Os materiais são enviados
+            para uma empresa especializada e convertidos em portas, gerando
+            renda para o Instituto.
+          </li>
+          <li>
+            <strong>Reciclagem de Tampinhas, Lacres e Latinhas:</strong> Projeto
+            complementar que amplia os esforços de sustentabilidade do
+            Instituto.
+          </li>
+          <li>
+            <strong>Locomoção Independente:</strong> Desenvolve habilidades para
+            deslocamento seguro dos aprendizes na comunidade, promovendo
+            autonomia.
+          </li>
+          <li>
+            <strong>Grupo de Iniciação:</strong> Atividades básicas e
+            observações práticas para desenvolver competências sociais e
+            profissionais.
+          </li>
+          <li>
+            <strong>Grupo de Pré-Qualificação:</strong> Formação profissional
+            com foco em habilidades básicas, de gestão e específicas para
+            atuação no mercado.
+          </li>
+          <li>
+            <strong>SEVIL (Serviço de Vivências Laborais):</strong> Oportunidade
+            de atividade laboral não remunerada para promover independência e
+            inclusão social.
+          </li>
+          <li>
+            <strong>Educação Física:</strong> Aulas com foco em saúde, lógica e
+            qualidade de vida, utilizando equipamentos e atividades físicas
+            orientadas.
+          </li>
+        </ul>
+      </div>
 
       <div className={stylesHome.newsSection}>
         <h2>Notícias</h2>
+
         <div className={stylesHome.newsCard}>
-          <img src={imgNews1} alt="Notícia 1" />
+          <img src={imgNews2} alt="Notícia 3" />
           <span className={stylesHome.category}>NEWS</span>
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <Link to="/noticias/1" className={stylesHome.saibaMais}>
+          <h3>
+            Pedágio solidário do Instituto Diomício Freitas acontece neste
+            sábado
+          </h3>
+          <p>
+            A ação beneficente tem como objetivo arrecadar fundos para manter os
+            atendimentos oferecidos pelo Instituto às pessoas com deficiência.
+          </p>
+          <a
+            href="https://www.4oito.com.br/noticia/instituto-diomicio-freitas-realiza-pedagio-solidario-neste-sabado-61051"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesHome.saibaMais}
+          >
             Saiba mais
-          </Link>
-          <span className={stylesHome.date}>14 June 2023</span>
+          </a>
+          <span className={stylesHome.date}>23 agosto 2023</span>
         </div>
 
         <div className={stylesHome.newsCard}>
           <img src={imgNews2} alt="Notícia 2" />
           <span className={stylesHome.category}>NEWS</span>
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <Link to="/noticias/2" className={stylesHome.saibaMais}>
+          <h3>Instituto comemora 38 anos com almoço beneficente</h3>
+          <p>
+            Evento realizado em Criciúma celebrou mais de três décadas de
+            história e arrecadou recursos para a manutenção das atividades da
+            entidade.
+          </p>
+          <a
+            href="https://tnsul.com/2023/04/23/instituto-diomicio-freitas-faz-almoco-beneficente-para-comemorar-38-anos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesHome.saibaMais}
+          >
             Saiba mais
-          </Link>
-          <span className={stylesHome.date}>13 June 2023</span>
+          </a>
+          <span className={stylesHome.date}>23 abril 2023</span>
+        </div>
+
+        <div className={stylesHome.newsCard}>
+          <img src={imgNews1} alt="Notícia 1" />
+          <span className={stylesHome.category}>NEWS</span>
+          <h3>
+            Instituto Diomício Freitas: 35 anos de inclusão e transformação
+          </h3>
+          <p>
+            Desde 1985, o Instituto atua na garantia dos direitos das pessoas
+            com deficiência, promovendo inclusão social e desenvolvimento
+            pessoal.
+          </p>
+          <a
+            href="https://www.engeplus.com.br/noticia/geral/2020/instituto-diomicio-freitas-ha-35-anos-atuando-na-garantia-dos-direitos-da-pessoa-com-deficiencia"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesHome.saibaMais}
+          >
+            Saiba mais
+          </a>
+          <span className={stylesHome.date}>18 dezembro 2020</span>
         </div>
       </div>
 
       <div className={stylesHome.eventsHeader}>
-        <h2>Eventos </h2>
+        <h2>Eventos</h2>
       </div>
 
       <div className={stylesHome.eventsGrid}>
@@ -76,11 +171,11 @@ const Home = () => {
         </div>
 
         <div className={stylesHome.eventCard}>
-          <img src={imgEvent2} alt="Evento 2" />
+          <img src={imgEvent4} alt="Evento 4" />
           <span className={stylesHome.category}>EVENTS</span>
           <h4>Lorem ipsum dolor sit amet</h4>
           <p>TONY HUNGRY</p>
-          <Link to="/eventos/2" className={stylesHome.saibaMais}>
+          <Link to="/eventos/4" className={stylesHome.saibaMais}>
             Saiba mais
           </Link>
           <span className={stylesHome.date}>13 June 2023</span>

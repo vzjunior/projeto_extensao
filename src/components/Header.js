@@ -13,12 +13,9 @@ const Header = () => {
         </div>
 
         <div className={styles.rightSection}>
-          {/*<button className={styles.actionBtn}>Login</button>
-          <button className={styles.actionBtn}>Login</button>*/}
           <Link to="/login" className={styles.actionBtn}>
             Login
           </Link>
-
           <Link to="/contatos" className={styles.actionBtn}>
             Contato
           </Link>
@@ -26,7 +23,7 @@ const Header = () => {
 
         <ul className={styles.menu}>
           <li>
-            <Link to="/#topo">Início</Link>
+            <Link to="/">Início</Link>
           </li>
           <li>
             <Link to="/historia">História</Link>
