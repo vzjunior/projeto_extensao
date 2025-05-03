@@ -45,3 +45,22 @@
   margin: 0;
   text-align: center;
 }
+
+
+.participarButton {
+  margin-top: 12px;
+  padding: 8px 12px; /* Ajuste no padding para diminuir a largura */
+  background-color: #004080;
+  color: #fff;
+  border: none; /* Remove a borda, o que evita a linha abaixo */
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Garantir que não tenha nenhum estilo de texto, como sublinhado */
+  display: inline-block; /* Garante que o botão tenha um tamanho menor */
+}
+
+.participarButton:hover {
+  background-color: #002f60;
+}

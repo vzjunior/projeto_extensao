@@ -83,7 +83,7 @@
   }
 
   .whatsapp {
-    color: rgb(25, 71, 25); 
+    color: #25d366; 
     font-size: 60px;
     transition: transform 0.3s ease, color 0.3s ease;
     position: fixed;

@@ -3,6 +3,7 @@ import styles from "../Section.module.css";
 import stylesEventos from "./Eventos.module.css";
 import imgEvent3 from "../../assets/images/fotoTesteHome.jpeg";
 
+
 const EventosOficinas = () => {
   return (
     <section className={styles.section} id="eventos-oficinas">
@@ -25,6 +26,14 @@ const EventosOficinas = () => {
             blisters, transformando-os em material reciclado para a fabricação
             de portas, enquanto arrecada fundos para o Instituto.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -35,6 +44,14 @@ const EventosOficinas = () => {
             para residência, trabalho e comunidade, utilizando transporte ou
             outros recursos de forma independente e segura.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -45,6 +62,14 @@ const EventosOficinas = () => {
             profissionais e sociais essenciais, como identidade pessoal e
             higiene, preparando os jovens para o mercado de trabalho.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -55,6 +80,14 @@ const EventosOficinas = () => {
             necessárias para o mercado de trabalho, com foco em formação
             profissional e competências de auto-gerenciamento.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -65,6 +98,14 @@ const EventosOficinas = () => {
             remuneradas, desenvolvendo independência pessoal e contribuindo para
             a inclusão social.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -75,6 +116,14 @@ const EventosOficinas = () => {
             melhorando a qualidade de vida e a concentração dos aprendizes por
             meio de exercícios físicos.
           </p>
+          <a
+            href="https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -85,6 +134,14 @@ const EventosOficinas = () => {
             e inclusão social dos filhos, promovendo o desenvolvimento pessoal e
             profissional.
           </p>
+          <a
+            href=" https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={stylesEventos.participarButton}
+          >
+            Participar
+          </a>
         </div>
       </div>
     </section>
