@@ -139,9 +139,9 @@ const Home = () => {
       <div className={stylesHome.eventsGrid}>
         <div className={stylesHome.eventCard}>
           <img src={imgEvent1} alt="Evento 1" />
-          <span className={stylesHome.category}>EVENTS</span>
-          <h4>Lorem ipsum dolor sit amet</h4>
-          <p>JANE DRINKS</p>
+          <span className={stylesHome.category}>EVENTO</span>
+          <h4>Reciclagem de Blisters</h4>
+          <p>Projeto "Recicle Correto".</p>
           <Link to="/eventos/1" className={stylesHome.saibaMais}>
             Saiba mais
           </Link>
@@ -150,9 +150,9 @@ const Home = () => {
 
         <div className={stylesHome.eventCard}>
           <img src={imgEvent2} alt="Evento 2" />
-          <span className={stylesHome.category}>EVENTS</span>
-          <h4>Lorem ipsum dolor sit amet</h4>
-          <p>TONY HUNGRY</p>
+          <span className={stylesHome.category}>EVENTO</span>
+          <h4>Locomoção Independente</h4>
+          <p>Locomoção autonoma.</p>
           <Link to="/eventos/2" className={stylesHome.saibaMais}>
             Saiba mais
           </Link>
@@ -161,9 +161,9 @@ const Home = () => {
 
         <div className={stylesHome.eventCard}>
           <img src={imgEvent3} alt="Evento 3" />
-          <span className={stylesHome.category}>EVENTS</span>
-          <h4>Lorem ipsum dolor sit amet</h4>
-          <p>TONY HUNGRY</p>
+          <span className={stylesHome.category}>EVENTO</span>
+          <h4>Grupo de Iniciação</h4>
+          <p>Atividades práticas.</p>
           <Link to="/eventos/3" className={stylesHome.saibaMais}>
             Saiba mais
           </Link>
@@ -172,9 +172,10 @@ const Home = () => {
 
         <div className={stylesHome.eventCard}>
           <img src={imgEvent4} alt="Evento 4" />
-          <span className={stylesHome.category}>EVENTS</span>
-          <h4>Lorem ipsum dolor sit amet</h4>
-          <p>TONY HUNGRY</p>
+          <span className={stylesHome.category}>EVENTO</span>
+          <h4>Grupo de Pré-Qualificação</h4>
+          <p>Formação
+          profissional e competências de auto-gerenciamento.</p>
           <Link to="/eventos/4" className={stylesHome.saibaMais}>
             Saiba mais
           </Link>

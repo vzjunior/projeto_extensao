@@ -135,7 +135,8 @@ const EventosOficinas = () => {
             profissional.
           </p>
           <a
-            href=" https://wa.me/5548998384125?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+            href="https://api.whatsapp.com/send?phone=5548998384125&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20instituto!"
+
             target="_blank"
             rel="noopener noreferrer"
             className={stylesEventos.participarButton}

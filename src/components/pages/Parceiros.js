@@ -54,6 +54,16 @@ const Parceiros = () => {
           <span>Unesc</span>
         </a>
       </div>
+      <div className={stylesParceiros.ctaParceiro}>
+  <p>Você representa uma empresa ou instituição e gostaria de fazer parte desta missão?</p>
+  <a
+    href="/contatos"
+    className={stylesParceiros.botaoSejaParceiro}
+  >
+    Seja um Parceiro
+  </a>
+</div>
+
     </section>
   );
 };

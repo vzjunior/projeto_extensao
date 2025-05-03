@@ -19,7 +19,7 @@
 }
 
 .botao {
-  background-color: black;
+  background-color: #004080;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -30,5 +30,5 @@
 }
 
 .botao:hover {
-  background-color: #333;
+  background-color:  #002f60;
 }
