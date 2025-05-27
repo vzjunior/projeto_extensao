@@ -10,6 +10,7 @@ import Contatos from "./components/pages/Contatos";
 import "./styles.css";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Login from "./components/pages/Login";
 const App = () => {
   return (
     <Router>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/como-se-voluntariar" element={<ComoSeVoluntariar />} />
         <Route path="/parceiros" element={<Parceiros />} />
         <Route path="/contatos" element={<Contatos />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
