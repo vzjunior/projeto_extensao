@@ -1,0 +1,63 @@
+.loginContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.infoLogin {
+  flex: 1;
+  text-align: left;   
+  max-width: 400px;
+  margin: 0;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0;
+}
+
+.form input,
+.form textarea,
+.form button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form button {
+  background-color: #002f60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #001f40;
+}
+
+
+.infoLogin h2 {
+  text-align: center;
+}
+
+.backgroundCard {
+  background-color: rgba(255, 255, 255, 0.9); /* Branco com transparência */
+  border-radius: 16px; /* Cantos arredondados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 40px;
+  margin: 60px auto; /* Espaçamento acima e centralização */
+  width: fit-content;
+}
