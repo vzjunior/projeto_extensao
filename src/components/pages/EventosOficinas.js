@@ -34,6 +34,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -52,6 +53,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -70,6 +72,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -88,6 +91,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -106,6 +110,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -124,6 +129,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
 
         <div className={stylesEventos.eventoBox}>
@@ -143,6 +149,7 @@ const EventosOficinas = () => {
           >
             Participar
           </a>
+          <span className={stylesEventos.date}>13 June 2023</span>
         </div>
       </div>
     </section>

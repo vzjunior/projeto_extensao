@@ -46,6 +46,12 @@
   text-align: left;
 }
 
+.date {
+  font-size: 13px;
+  color: #999;
+  float: right;
+}
+
 
 .participarButton {
   margin-top: 12px;

@@ -68,7 +68,7 @@ const Home = () => {
         <h2>Notícias</h2>
 
         <div className={stylesHome.newsCard}>
-          <img src={imgNews2} alt="Notícia 3" />
+          <img src={imgNews2} alt="Notícia 1" />
           <span className={stylesHome.category}>NEWS</span>
           <h3>
             Pedágio solidário do Instituto Diomício Freitas acontece neste
@@ -78,14 +78,10 @@ const Home = () => {
             A ação beneficente tem como objetivo arrecadar fundos para manter os
             atendimentos oferecidos pelo Instituto às pessoas com deficiência.
           </p>
-          <a
-            href="https://www.4oito.com.br/noticia/instituto-diomicio-freitas-realiza-pedagio-solidario-neste-sabado-61051"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={stylesHome.saibaMais}
-          >
+          <Link to="/noticias/1" className={stylesHome.saibaMais}>
             Saiba mais
-          </a>
+          </Link>
+         
           <span className={stylesHome.date}>23 agosto 2023</span>
         </div>
 
@@ -98,19 +94,14 @@ const Home = () => {
             história e arrecadou recursos para a manutenção das atividades da
             entidade.
           </p>
-          <a
-            href="https://tnsul.com/2023/04/23/instituto-diomicio-freitas-faz-almoco-beneficente-para-comemorar-38-anos/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={stylesHome.saibaMais}
-          >
+          <Link to="/noticias/2" className={stylesHome.saibaMais}>
             Saiba mais
-          </a>
+          </Link>
           <span className={stylesHome.date}>23 abril 2023</span>
         </div>
 
         <div className={stylesHome.newsCard}>
-          <img src={imgNews1} alt="Notícia 1" />
+          <img src={imgNews1} alt="Notícia 3" />
           <span className={stylesHome.category}>NEWS</span>
           <h3>
             Instituto Diomício Freitas: 35 anos de inclusão e transformação
@@ -120,16 +111,15 @@ const Home = () => {
             com deficiência, promovendo inclusão social e desenvolvimento
             pessoal.
           </p>
-          <a
-            href="https://www.engeplus.com.br/noticia/geral/2020/instituto-diomicio-freitas-ha-35-anos-atuando-na-garantia-dos-direitos-da-pessoa-com-deficiencia"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={stylesHome.saibaMais}
-          >
+         <Link to="/noticias/3" className={stylesHome.saibaMais}>
             Saiba mais
-          </a>
+          </Link>
           <span className={stylesHome.date}>18 dezembro 2020</span>
         </div>
+
+        
+        
+        
       </div>
 
       <div className={stylesHome.eventsHeader}>
@@ -183,6 +173,8 @@ const Home = () => {
         </div>
       </div>
     </section>
+
+
   );
 };
 
