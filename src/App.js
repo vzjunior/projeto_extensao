@@ -7,10 +7,12 @@ import EventosOficinas from "./components/pages/EventosOficinas";
 import ComoSeVoluntariar from "./components/pages/ComoSeVoluntariar";
 import Parceiros from "./components/pages/Parceiros";
 import Contatos from "./components/pages/Contatos";
+import NoticiaDetalhada from "./components/NoticiaDetalhada";
 import "./styles.css";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/pages/Login";
+import EventoDetalhado from "./components/EventoDetalhado";
 const App = () => {
   return (
     <Router>
@@ -18,6 +20,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/noticias/:id" element={<NoticiaDetalhada />} />
+        <Route path="/eventos/:id" element={<EventoDetalhado />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/eventos-oficinas" element={<EventosOficinas />} />
         <Route path="/como-se-voluntariar" element={<ComoSeVoluntariar />} />

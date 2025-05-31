@@ -1,0 +1,18 @@
+.container {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #f5f7fa;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+
+

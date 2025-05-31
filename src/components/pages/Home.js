@@ -4,16 +4,16 @@ import stylesHome from "./Home.module.css";
 import fundoHome from "../../assets/images/fundoHome.jpeg";
 import { Link } from "react-router-dom";
 import api from "../../api/axios";
-import imgEvent1 from "../../assets/images/fotoTesteHome.jpeg";
-import imgEvent2 from "../../assets/images/fotoTesteHome.jpeg";
-import imgEvent3 from "../../assets/images/fotoTesteHome.jpeg";
-import imgEvent4 from "../../assets/images/fotoTesteHome.jpeg";
 
 
 const Home = () => {
   const [noticias, setNoticias] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [eventos, setEventos] = useState([]);
+  const [loadingEventos, setLoadingEventos] = useState(true);
+  const [errorEventos, setErrorEventos] = useState(null);
 
   useEffect(() => {
     async function fetchNoticias() {
@@ -26,7 +26,20 @@ const Home = () => {
         setLoading(false);
       }
     }
+
+     async function fetchEventos() {
+      try {
+        const response = await api.get("/eventos");
+        setEventos(response.data);
+      } catch (err) {
+        setErrorEventos("Erro ao carregar eventos.");
+      } finally {
+        setLoadingEventos(false);
+      }
+    }
+
     fetchNoticias();
+    fetchEventos();
   }, []);
 
   return (
@@ -96,54 +109,43 @@ const Home = () => {
       </div>
 
       <div className={stylesHome.eventsHeader}>
-        <h2>Eventos</h2>
-      </div>
+  <h2>Eventos</h2>
 
-      <div className={stylesHome.eventsGrid}>
-        <div className={stylesHome.eventCard}>
-          <img src={imgEvent1} alt="Evento 1" />
-          <span className={stylesHome.category}>EVENTO</span>
-          <h4>Reciclagem de Blisters</h4>
-          <p>Projeto "Recicle Correto".</p>
-          <Link to="/eventos/1" className={stylesHome.saibaMais}>
-            Saiba mais
-          </Link>
-          <span className={stylesHome.date}>13 June 2023</span>
-        </div>
 
-        <div className={stylesHome.eventCard}>
-          <img src={imgEvent2} alt="Evento 2" />
-          <span className={stylesHome.category}>EVENTO</span>
-          <h4>Locomoção Independente</h4>
-          <p>Locomoção autonoma.</p>
-          <Link to="/eventos/2" className={stylesHome.saibaMais}>
-            Saiba mais
-          </Link>
-          <span className={stylesHome.date}>13 June 2023</span>
-        </div>
+{loadingEventos && <p>Carregando eventos...</p>}
+{errorEventos && <p>{errorEventos}</p>}
+{!loadingEventos && !errorEventos && eventos.length === 0 && <p>Nenhum evento encontrado.</p>}
 
-        <div className={stylesHome.eventCard}>
-          <img src={imgEvent3} alt="Evento 3" />
-          <span className={stylesHome.category}>EVENTO</span>
-          <h4>Grupo de Iniciação</h4>
-          <p>Atividades práticas.</p>
-          <Link to="/eventos/3" className={stylesHome.saibaMais}>
-            Saiba mais
-          </Link>
-          <span className={stylesHome.date}>13 June 2023</span>
-        </div>
 
-        <div className={stylesHome.eventCard}>
-          <img src={imgEvent4} alt="Evento 4" />
-          <span className={stylesHome.category}>EVENTO</span>
-          <h4>Grupo de Pré-Qualificação</h4>
-          <p>Formação profissional e competências de auto-gerenciamento.</p>
-          <Link to="/eventos/4" className={stylesHome.saibaMais}>
-            Saiba mais
-          </Link>
-          <span className={stylesHome.date}>13 June 2023</span>
-        </div>
-      </div>
+<div className={stylesHome.eventsGrid}>
+  {eventos.map((evento) => (
+    <div key={evento.id} className={stylesHome.eventCard}>
+      {evento.imagem_url && (
+        <img
+          src={`http://localhost:3001/img/${evento.imagem_url}`}
+          alt={evento.titulo}
+          className={stylesHome.eventImage}
+        />
+      )}
+      <span className={stylesHome.category}>EVENTO</span>
+      <h4>{evento.titulo}</h4>
+      <p>
+        {evento.descricao.length > 100
+          ? evento.descricao.slice(0, 100) + "..."
+          : evento.descricao}
+      </p>
+      <Link to={`/eventos/${evento.id}`} className={stylesHome.saibaMais}>
+        Saiba mais
+      </Link>
+      <span className={stylesHome.date}>
+        {new Date(evento.data_evento).toLocaleDateString()}
+      </span>
+    </div>
+  ))}
+</div>
+</div>
+
+
     </section>
   );
 };
