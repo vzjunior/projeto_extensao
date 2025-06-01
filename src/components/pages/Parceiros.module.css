@@ -9,7 +9,6 @@
   flex-wrap: wrap;
 }
 
-/* Link individual do parceiro */
 .parceiro {
   text-align: center;
   text-decoration: none;
@@ -22,7 +21,7 @@
   height: 120px;
   margin: 0 auto 10px;
   border-radius: 50%;
-  background-color: #fff; /* fallback */
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -41,7 +40,6 @@
   transform: scale(1.05);
 }
 
-/* Nome do parceiro */
 .parceiro span {
   display: block;
   font-size: 16px;

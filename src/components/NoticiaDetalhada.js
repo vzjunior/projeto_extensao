@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import styles from './NoticiaDetalhada.module.css';
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import styles from "./NoticiaDetalhada.module.css";
 
 function NoticiaDetalhada() {
   const { id } = useParams();
@@ -8,15 +8,14 @@ function NoticiaDetalhada() {
 
   useEffect(() => {
     fetch(`http://localhost:3001/noticias/${id}`)
-      .then(res => res.json())
-      .then(data => setNoticia(data));
+      .then((res) => res.json())
+      .then((data) => setNoticia(data));
   }, [id]);
 
   if (!noticia) return <p>Carregando...</p>;
 
   return (
-    <section>
-    <div className={styles.container}>
+    <section className={styles.section}>
       <h1>{noticia.titulo}</h1>
       {noticia.imagem_url && (
         <img
@@ -26,7 +25,6 @@ function NoticiaDetalhada() {
         />
       )}
       <p>{noticia.conteudo}</p>
-    </div>
     </section>
   );
 }
