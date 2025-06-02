@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./NoticiaDetalhada.module.css";
+import stylesSection from "./Section.module.css";
 
 function NoticiaDetalhada() {
   const { id } = useParams();
@@ -15,7 +16,7 @@ function NoticiaDetalhada() {
   if (!noticia) return <p>Carregando...</p>;
 
   return (
-    <section className={styles.section}>
+    <section className={stylesSection.section}>
       <h1>{noticia.titulo}</h1>
       {noticia.imagem_url && (
         <img

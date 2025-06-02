@@ -16,7 +16,7 @@ const Parceiros = () => {
   return (
     <section className={styles.section} id="parceiros">
       <h2>Nossos Parceiros</h2>
-      <p className={stylesParceiros.parceiroTexto}>
+      <p>
         O Instituto Diomício Freitas é grato por contar com a colaboração de
         diversos parceiros que acreditam na nossa missão de promover a inclusão
         e garantir os direitos das pessoas com deficiência. Estes parceiros,

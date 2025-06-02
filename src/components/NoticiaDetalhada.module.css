@@ -1,27 +1,4 @@
-.section {
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 1300px;
-  background-color: #f5f7fa;
-  border-radius: 8px;
-  box-shadow: none;
-}
 
-.section h1,
-.section h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.section p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: #333;
-  margin: 1rem 0;
-  text-align: justify;
-}
 
 .image {
   width: 100%;

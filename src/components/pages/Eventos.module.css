@@ -1,6 +1,5 @@
-.eventoContainer p {
-  text-align: justify;
-}
+
+
 
 .eventoContainer {
   display: flex;
@@ -53,7 +52,7 @@
 }
 
 
-.participarButton {
+.saibaMaisButton {
   margin-top: 12px;
   padding: 8px 12px; /* Ajuste no padding para diminuir a largura */
   background-color: #004080;
@@ -67,6 +66,6 @@
   display: inline-block; /* Garante que o botão tenha um tamanho menor */
 }
 
-.participarButton:hover {
+.saibaMaisButton:hover {
   background-color: #002f60;
 }

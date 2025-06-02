@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/pages/Login";
 import EventoDetalhado from "./components/EventoDetalhado";
+import OficinaDetalhada from "./components/pages/OficinaDetalhada";
 const App = () => {
   return (
     <Router>
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/eventos/:id" element={<EventoDetalhado />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/eventos-oficinas" element={<EventosOficinas />} />
+        <Route path="/oficinas/:id" element={<OficinaDetalhada />} />
         <Route path="/como-se-voluntariar" element={<ComoSeVoluntariar />} />
         <Route path="/parceiros" element={<Parceiros />} />
         <Route path="/contatos" element={<Contatos />} />

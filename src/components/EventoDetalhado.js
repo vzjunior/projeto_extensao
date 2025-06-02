@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./EventoDetalhado.module.css";
+import stylesSection from  "./Section.module.css";
 
 function EventoDetalhado() {
   const { id } = useParams();
@@ -15,7 +16,7 @@ function EventoDetalhado() {
   if (!evento) return <p>Carregando...</p>;
 
   return (
-    <section className={styles.section}>
+    <section className={stylesSection.section}>
       <h1>{evento.titulo}</h1>
       {evento.imagem_url && (
         <img
