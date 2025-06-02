@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./OficinaDetalhada.module.css";
-import stylesSection from "../Section.module.css";
+import stylesSection from "./Section.module.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 function OficinaDetalhada() {

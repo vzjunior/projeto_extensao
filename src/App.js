@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/pages/Login";
 import EventoDetalhado from "./components/EventoDetalhado";
-import OficinaDetalhada from "./components/pages/OficinaDetalhada";
+import OficinaDetalhada from "./components/OficinaDetalhada";
 const App = () => {
   return (
     <Router>

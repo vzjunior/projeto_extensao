@@ -5,17 +5,27 @@ import stylesParceiros from "./Parceiros.module.css";
 
 const Parceiros = () => {
   const [parceiros, setParceiros] = useState([]);
+  const [loadingParceiros, setLoadingParceiros] = useState(true);
+  const [errorParceiros, setErrorParceiros] = useState(null);
 
   useEffect(() => {
-    api
-      .get("/parceiros")
-      .then((response) => setParceiros(response.data))
-      .catch((error) => console.error("Erro ao buscar parceiros:", error));
+    async function fetchParceiros() {
+      try {
+        const response = await api.get("/parceiros");
+        setParceiros(response.data);
+      } catch (err) {
+        setErrorParceiros("Erro ao carregar Parceiros.");
+      } finally {
+        setLoadingParceiros(false);
+      }
+    }
+    fetchParceiros();
   }, []);
 
   return (
     <section className={styles.section} id="parceiros">
       <h2>Nossos Parceiros</h2>
+
       <p>
         O Instituto Diomício Freitas é grato por contar com a colaboração de
         diversos parceiros que acreditam na nossa missão de promover a inclusão
@@ -27,34 +37,36 @@ const Parceiros = () => {
         integração social dos nossos beneficiários.
       </p>
 
+      {loadingParceiros && <p>Carregando parceiros...</p>}
+      {errorParceiros && <p>{errorParceiros}</p>}
+      {!loadingParceiros && !errorParceiros && parceiros.length === 0 && (
+        <p>Nenhum parceiro encontrado.</p>
+      )}
+
       <div className={stylesParceiros.parceirosContainer}>
-        {parceiros.length > 0 ? (
-          parceiros.map((parceiro) => (
-            <a
-              key={parceiro.id}
-              href={parceiro.site_url}
-              className={stylesParceiros.parceiro}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={stylesParceiros.circle}>
-                {parceiro.imagem_url ? (
-                  <img
-                    src={`http://localhost:3001/img/${parceiro.imagem_url}`}
-                    alt={parceiro.nome}
-                  />
-                ) : (
-                  <div style={{ fontSize: "12px", color: "#999" }}>
-                    Sem imagem
-                  </div>
-                )}
-              </div>
-              <span>{parceiro.nome}</span>
-            </a>
-          ))
-        ) : (
-          <p>Carregando parceiros...</p>
-        )}
+        {parceiros.map((parceiro) => (
+          <a
+            key={parceiro.id}
+            href={parceiro.site_url}
+            className={stylesParceiros.parceiro}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={stylesParceiros.circle}>
+              {parceiro.imagem_url ? (
+                <img
+                  src={`http://localhost:3001/img/${parceiro.imagem_url}`}
+                  alt={parceiro.nome}
+                />
+              ) : (
+                <div style={{ fontSize: "12px", color: "#999" }}>
+                  Sem imagem
+                </div>
+              )}
+            </div>
+            <span>{parceiro.nome}</span>
+          </a>
+        ))}
       </div>
 
       <div className={stylesParceiros.ctaParceiro}>
