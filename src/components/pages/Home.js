@@ -81,37 +81,67 @@ const Home = () => {
       <div className={stylesHome.newsSection}>
         <h2>Notícias</h2>
 
+        {user && user.role === "admin" && (
+          <div >
+            <Link to="/noticias/cadastrar" className={stylesHome.buttonAdicionar}>
+              Adicionar Notícia
+            </Link>
+          </div>
+        )}
+
+
         {loading && <p>Carregando notícias...</p>}
         {error && <p>{error}</p>}
         {!loading && !error && noticias.length === 0 && <p>Nenhuma notícia encontrada.</p>}
 
         <div className={stylesHome.newsList}>
-{noticias.map((noticia) => (
-  <div key={noticia.id} className={stylesHome.newsCard}>
-    {noticia.imagem_url && (
-      <img
-        src={`http://localhost:3001/img/${noticia.imagem_url}`}
-        alt={noticia.titulo}
-        className={stylesHome.newsImage}
-      />
-    )}
-    <span className={stylesHome.category}>NEWS</span>
-    <h3>{noticia.titulo}</h3>
-    <p>
-      {noticia.conteudo.length > 250
-        ? noticia.conteudo.slice(0, 250) + "..."
-        : noticia.conteudo}
-    </p>
-    <Link to={`/noticias/${noticia.id}`} className={stylesHome.saibaMais}>
-      Saiba mais
-    </Link>
+          {noticias.map((noticia) => (
+            <div key={noticia.id} className={stylesHome.newsCard}>
+              {noticia.imagem_url && (
+                <img
+                  src={`http://localhost:3001/img/${noticia.imagem_url}`}
+                  alt={noticia.titulo}
+                  className={stylesHome.newsImage}
+                />
+              )}
+              <span className={stylesHome.category}>NEWS</span>
+              <h3>{noticia.titulo}</h3>
+              <p>
+                {noticia.conteudo.length > 250
+                  ? noticia.conteudo.slice(0, 250) + "..."
+                  : noticia.conteudo}
+              </p>
+              <Link to={`/noticias/${noticia.id}`} className={stylesHome.saibaMais}>
+                Saiba mais
+              </Link>
 
-    {/* Botão visível apenas para admin */}
-    {user && user.role === "admin" && (
-      <button className={stylesHome.botaoAdmin}>Editar Notícia</button>
-    )}
-  </div>
-))}
+              {/* Botão visível apenas para admin */}
+              {user && user.role === "admin" && (
+
+                <div className={stylesHome.botoesContainer}>
+                  <button
+                    className={stylesHome.buttonEditar}
+                    onClick={() => console.log("Editar notícia", noticia.id)}
+                  >
+                     Editar Notícia
+                  </button>
+
+                  <button
+                    className={stylesHome.buttonExcluir}
+                    onClick={() => console.log("Excluir notícia", noticia.id)}
+                  >
+                     Excluir Notícia
+                  </button>
+                </div>
+              )}
+
+
+
+
+
+
+            </div>
+          ))}
 
         </div>
       </div>

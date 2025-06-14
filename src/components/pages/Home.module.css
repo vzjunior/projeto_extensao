@@ -106,7 +106,9 @@
   margin: 0;
 }
 
-.saibaMais {
+.saibaMais ,
+.buttonAdicionar
+{
   margin-top: 12px;
   padding: 8px 12px;
   background-color: #004080;
@@ -120,7 +122,9 @@
   display: inline-block;
 }
 
-.saibaMais:hover {
+
+.saibaMais:hover ,
+.buttonAdicionar:hover {
   background-color: #002f60;
 }
 
@@ -144,3 +148,40 @@
   margin-bottom: 12px;
   line-height: 1.6;
 }
+
+
+
+.buttonEditar{
+  background-color: #004080;
+}
+
+.buttonEditar,
+.buttonExcluir {
+  padding: 8px 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonExcluir{
+  background-color: #c62828;
+}
+
+.buttonExcluir:hover {
+  background-color: #b71c1c;
+}
+
+.buttonEditar:hover {
+  background-color: #002f60;
+}
+
+
+.botoesContainer {
+  display: flex;
+  justify-content: flex-end; /* alinha os botões à direita */
+  gap: 10px; /* espaço entre os botões */
+  margin-top: 10px;
+}
+
