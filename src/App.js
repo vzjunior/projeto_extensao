@@ -12,13 +12,10 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./components/pages/Login";
 import EventoDetalhado from "./components/EventoDetalhado";
-import OficinaDetalhada from "./components/OficinaDetalhada";
-
-// IMPORTA o AuthProvider do contexto de autenticação
 import { AuthProvider } from "./context/AuthContext";
-
 import "./styles.css";
 import CadastroNoticia from "./components/CadastroNoticia";
+import CadastroEvento from "./components/CadastroEvento";
 
 const App = () => {
   return (
@@ -29,11 +26,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/noticias/cadastrar" element={<CadastroNoticia />} />
+          <Route path="/noticias/editar/:id" element={<CadastroNoticia />} />
+          <Route path="/eventos/cadastrar" element={<CadastroEvento />} />
+          <Route path="/eventos/editar/:id" element={<CadastroEvento />} />
           <Route path="/noticias/:id" element={<NoticiaDetalhada />} />
           <Route path="/eventos/:id" element={<EventoDetalhado />} />
           <Route path="/historia" element={<Historia />} />
           <Route path="/eventos-oficinas" element={<EventosOficinas />} />
-          <Route path="/oficinas/:id" element={<OficinaDetalhada />} />
+         
           <Route path="/como-se-voluntariar" element={<ComoSeVoluntariar />} />
           <Route path="/parceiros" element={<Parceiros />} />
           <Route path="/contatos" element={<Contatos />} />

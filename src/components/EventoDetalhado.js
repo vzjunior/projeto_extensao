@@ -29,8 +29,9 @@ function EventoDetalhado() {
         <strong>Descrição:</strong> {evento.descricao}
       </p>
       <p>
-        <strong>Data do Evento:</strong> {evento.data_evento}
-      </p>
+  <strong>Data do Evento:</strong>{" "}
+  {new Date(evento.data_evento).toLocaleDateString("pt-BR")}
+</p>
       <p>
         <strong>Local:</strong> {evento.local}
       </p>

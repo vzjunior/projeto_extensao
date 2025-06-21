@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "../Section.module.css";
 import stylesHome from "./Home.module.css";
 import fundoHome from "../../assets/images/fundoHome.jpeg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";  // <-- Importa useNavigate
 import api from "../../api/axios";
-import { useAuth } from "../../context/AuthContext"; // Importa contexto de autenticação
+import { useAuth } from "../../context/AuthContext";
 
 const Home = () => {
   const [noticias, setNoticias] = useState([]);
@@ -15,7 +15,9 @@ const Home = () => {
   const [loadingEventos, setLoadingEventos] = useState(true);
   const [errorEventos, setErrorEventos] = useState(null);
 
-  const { user } = useAuth(); // Acessa informações do usuário logado
+  const { user } = useAuth();
+
+  const navigate = useNavigate();  // <-- Cria o navigate
 
   useEffect(() => {
     async function fetchNoticias() {
@@ -30,14 +32,15 @@ const Home = () => {
     }
 
     async function fetchEventos() {
-      try {
-        const response = await api.get("/eventos");
-        setEventos(response.data);
-      } catch (err) {
-        setErrorEventos("Erro ao carregar eventos.");
-      } finally {
-        setLoadingEventos(false);
-      }
+    try {
+     
+      const response = await api.get("/eventos/futuros");
+      setEventos(response.data);
+    } catch (err) {
+      setErrorEventos("Erro ao carregar eventos.");
+    } finally {
+      setLoadingEventos(false);
+    }
     }
 
     fetchNoticias();
@@ -82,13 +85,12 @@ const Home = () => {
         <h2>Notícias</h2>
 
         {user && user.role === "admin" && (
-          <div >
+          <div>
             <Link to="/noticias/cadastrar" className={stylesHome.buttonAdicionar}>
-              Adicionar Notícia
+              Adicionar 
             </Link>
           </div>
         )}
-
 
         {loading && <p>Carregando notícias...</p>}
         {error && <p>{error}</p>}
@@ -115,39 +117,49 @@ const Home = () => {
                 Saiba mais
               </Link>
 
-              {/* Botão visível apenas para admin */}
               {user && user.role === "admin" && (
-
                 <div className={stylesHome.botoesContainer}>
                   <button
                     className={stylesHome.buttonEditar}
-                    onClick={() => console.log("Editar notícia", noticia.id)}
+                    onClick={() => navigate(`/noticias/editar/${noticia.id}`)}  // <-- Navega para edição
                   >
-                     Editar Notícia
+                    Editar 
                   </button>
 
                   <button
                     className={stylesHome.buttonExcluir}
-                    onClick={() => console.log("Excluir notícia", noticia.id)}
+                    onClick={async () => {
+                      const confirm = window.confirm("Deseja realmente excluir esta notícia?");
+                      if (confirm) {
+                        try {
+                          await api.delete(`/noticias/${noticia.id}`);
+                          setNoticias(noticias.filter(n => n.id !== noticia.id));
+                          alert("Notícia excluída com sucesso!");
+                        } catch (err) {
+                          alert("Erro ao excluir notícia.");
+                        }
+                      }
+                    }}
                   >
-                     Excluir Notícia
+                    Excluir
                   </button>
                 </div>
               )}
-
-
-
-
-
-
             </div>
           ))}
-
         </div>
       </div>
 
       <div className={stylesHome.eventsHeader}>
-        <h2>Eventos</h2>
+        <h2>Próximos Eventos</h2>
+
+        {user && user.role === "admin" && (
+          <div>
+            <Link to="/eventos/cadastrar" className={stylesHome.buttonAdicionar}>
+              Adicionar 
+            </Link>
+          </div>
+        )}
 
         {loadingEventos && <p>Carregando eventos...</p>}
         {errorEventos && <p>{errorEventos}</p>}
@@ -159,6 +171,7 @@ const Home = () => {
               {evento.imagem_url && (
                 <img
                   src={`http://localhost:3001/img/${evento.imagem_url}`}
+
                   alt={evento.titulo}
                   className={stylesHome.eventImage}
                 />
@@ -176,10 +189,43 @@ const Home = () => {
               <span className={stylesHome.date}>
                 {new Date(evento.data_evento).toLocaleDateString()}
               </span>
+
+               {user && user.role === "admin" && (
+                <div className={stylesHome.botoesContainer}>
+                  <button
+                    className={stylesHome.buttonEditar}
+                    onClick={() => navigate(`/eventos/editar/${evento.id}`)}  // <-- Navega para edição
+                  >
+                    Editar 
+                  </button>
+
+                  <button
+                    className={stylesHome.buttonExcluir}
+                    onClick={async () => {
+                      const confirm = window.confirm("Deseja realmente excluir esta evento?");
+                      if (confirm) {
+                        try {
+                          await api.delete(`/eventos/${evento.id}`);
+                          setEventos(eventos.filter(n => n.id !== evento.id));
+                          alert("Evento excluído com sucesso!");
+                        } catch (err) {
+                          alert("Erro ao excluir evento.");
+                        }
+                      }
+                    }}
+                  >
+                    Excluir 
+                  </button>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
+      
+
+      
     </section>
   );
 };
