@@ -60,7 +60,7 @@ const EventosOficinas = () => {
 
       {!loading && !error && (
         <>
-          <h1>Próximos Eventos</h1>
+          <h2 className={stylesEventos.subtitulo}>Próximos Eventos</h2>
           {eventosFuturos.length === 0 ? (
             <p>Não há eventos futuros.</p>
           ) : (
@@ -74,7 +74,7 @@ const EventosOficinas = () => {
                       className={stylesEventos.eventImage}
                     />
                   )}
-                  <span className={stylesEventos.category}>EVENTO</span>
+                  <span className={stylesEventos.category}></span>
                   <h4>{evento.titulo}</h4>
                   <p>
                     {evento.descricao.length > 100
@@ -124,7 +124,7 @@ const EventosOficinas = () => {
             </div>
           )}
 
-        <h1>Eventos Realizados</h1>
+        <h2 className={stylesEventos.subtitulo}>Eventos Realizados</h2>
           {eventosRealizados.length === 0 ? (
             <p>Não há eventos realizados.</p>
           ) : (
@@ -138,7 +138,7 @@ const EventosOficinas = () => {
                       className={stylesEventos.eventImage}
                     />
                   )}
-                  <span className={stylesEventos.category}>EVENTO</span>
+                  <span className={stylesEventos.category}></span>
                   <h4>{evento.titulo}</h4>
                   <p>
                     {evento.descricao.length > 100

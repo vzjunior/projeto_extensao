@@ -106,7 +106,7 @@ const Home = () => {
                   className={stylesHome.newsImage}
                 />
               )}
-              <span className={stylesHome.category}>NEWS</span>
+              <span className={stylesHome.category}></span>
               <h3>{noticia.titulo}</h3>
               <p>
                 {noticia.conteudo.length > 250
@@ -176,7 +176,7 @@ const Home = () => {
                   className={stylesHome.eventImage}
                 />
               )}
-              <span className={stylesHome.category}>EVENTO</span>
+              <span className={stylesHome.category}></span>
               <h4>{evento.titulo}</h4>
               <p>
                 {evento.descricao.length > 100

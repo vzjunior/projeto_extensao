@@ -16,6 +16,7 @@ import { AuthProvider } from "./context/AuthContext";
 import "./styles.css";
 import CadastroNoticia from "./components/CadastroNoticia";
 import CadastroEvento from "./components/CadastroEvento";
+import CadastroParceiro from "./components/CadastroParceiros";
 
 const App = () => {
   return (
@@ -29,6 +30,8 @@ const App = () => {
           <Route path="/noticias/editar/:id" element={<CadastroNoticia />} />
           <Route path="/eventos/cadastrar" element={<CadastroEvento />} />
           <Route path="/eventos/editar/:id" element={<CadastroEvento />} />
+          <Route path="/parceiros/cadastrar" element={<CadastroParceiro />} />
+          <Route path="/parceiros/editar/:id" element={<CadastroParceiro />} />
           <Route path="/noticias/:id" element={<NoticiaDetalhada />} />
           <Route path="/eventos/:id" element={<EventoDetalhado />} />
           <Route path="/historia" element={<Historia />} />
